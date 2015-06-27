@@ -36,9 +36,9 @@ public class Player {
 					}
 				
 			}
-			break;
+			
 		}
-    	return 0;
+    	return Integer.parseInt(buy_in)+200;
         
 
     }
