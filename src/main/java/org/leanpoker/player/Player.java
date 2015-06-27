@@ -18,10 +18,10 @@ public class Player {
     	int raise=0;
     	JsonObject object = request.getAsJsonObject();
     	String buy_in = object.get("current_buy_in").toString();
-    	System.out.println("Help me world");
     	JsonArray jarray = object.getAsJsonArray("players");
     	for (int i = 0; i < jarray.size(); i++) {
 			if(jarray.get(i).getAsJsonObject().get("name").toString().toLowerCase().equals("penali")){
+				System.out.println("Help me world");
 				JsonArray karte = jarray.get(i).getAsJsonObject().get("hole_cards").getAsJsonArray();
 				if (karte.get(0).getAsJsonObject().get("rank").toString().equals(karte.get(1).getAsJsonObject().get("rank").toString()) || 
 					karte.get(0).getAsJsonObject().get("suit").toString().equals(karte.get(1).getAsJsonObject().get("suit").toString())){
