@@ -68,7 +68,8 @@ public class Player {
 				return Integer.parseInt(buy_in)+ 200;
 			}
 		}
-	return 0;
+	return Integer.parseInt(buy_in)-jarray.get(1).getAsJsonObject().get(
+			"bet").getAsInt();
 
 }
 
