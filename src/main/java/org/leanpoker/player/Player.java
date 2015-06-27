@@ -66,6 +66,7 @@ public class Player {
 							.get("suit")
 							.toString()
 							.equals(karte.get(1).getAsJsonObject().get("suit")
+<<<<<<< HEAD
 									.toString())) {
 				return Integer.parseInt(buy_in) + 200;
 			}else if (karte
@@ -88,6 +89,15 @@ public class Player {
 						- jarray.get(1).getAsJsonObject().get("bet").getAsInt();
 			}
 		}
+=======
+									.toString())){
+				System.out.println("PAR U RUCI");
+				return Integer.parseInt(buy_in)+ 200;
+			}
+		}
+	return Integer.parseInt(buy_in)-jarray.get(1).getAsJsonObject().get(
+			"bet").getAsInt();
+>>>>>>> origin/master
 
 	}
 
