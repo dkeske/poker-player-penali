@@ -27,7 +27,7 @@ public class Player {
 					karte.get(0).getAsJsonObject().get("suit").toString().equals(karte.get(1).getAsJsonObject().get("suit").toString())){
 						return Integer.parseInt(buy_in)+200; 
 					} else {
-						return 0;
+						return Integer.parseInt(buy_in)+100;
 					}
 			}
 		}
