@@ -81,6 +81,7 @@ public class Player {
 					.get("rank")
 					.toString()
 					.matches("^[JKDA]|[1][0]$")) {
+				System.out.println("REGEEEEEEX!!!");
 				return Integer.parseInt(buy_in) + 100;
 				
 			}
