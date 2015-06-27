@@ -25,6 +25,7 @@ public class Player {
 				JsonArray karte = jarray.get(i).getAsJsonObject().get("hole_cards").getAsJsonArray();
 				if (karte.get(0).getAsJsonObject().get("rank").toString().equals(karte.get(1).getAsJsonObject().get("rank").toString()) || 
 					karte.get(0).getAsJsonObject().get("suit").toString().equals(karte.get(1).getAsJsonObject().get("suit").toString())){
+						System.out.println("Hello world :)");
 						return Integer.parseInt(buy_in)+200; 
 					} else {
 						return Integer.parseInt(buy_in)+100;
