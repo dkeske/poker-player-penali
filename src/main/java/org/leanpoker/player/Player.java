@@ -12,8 +12,7 @@ public class Player {
 	static final String VERSION = "We will win. Some. We will.";
 
 	public static int betRequest(JsonElement request) {
-		
-		
+
 		int i;
 		int raise = 0;
 		int counter = 1;
@@ -61,44 +60,24 @@ public class Player {
 					.toString()
 					.equals(karte.get(1).getAsJsonObject().get("rank")
 							.toString())
-					|| karte.get(0)
-							.getAsJsonObject()
-							.get("suit")
-							.toString()
+					|| karte.get(0).getAsJsonObject().get("suit").toString()
 							.equals(karte.get(1).getAsJsonObject().get("suit")
-<<<<<<< HEAD
-									.toString())) {
+
+							.toString())) {
+				System.out.println("PAR U RUCI");
 				return Integer.parseInt(buy_in) + 200;
-			}else if (karte
-					.get(0)
-					.getAsJsonObject()
-					.get("rank")
-					.toString()
+			} else if (karte.get(0).getAsJsonObject().get("rank").toString()
 					.matches("^[JKDA]|[1][0]$")
-					|| karte
-					.get(1)
-					.getAsJsonObject()
-					.get("rank")
-					.toString()
-					.matches("^[JKDA]|[1][0]$")) {
+					|| karte.get(1).getAsJsonObject().get("rank").toString()
+							.matches("^[JKDA]|[1][0]$")) {
 				System.out.println("REGEEEEEEX!!!");
 				return Integer.parseInt(buy_in) + 100;
-				
-			}
-			else {
+
+			} else {
 				return Integer.parseInt(buy_in)
 						- jarray.get(1).getAsJsonObject().get("bet").getAsInt();
 			}
 		}
-=======
-									.toString())){
-				System.out.println("PAR U RUCI");
-				return Integer.parseInt(buy_in)+ 200;
-			}
-		}
-	return Integer.parseInt(buy_in)-jarray.get(1).getAsJsonObject().get(
-			"bet").getAsInt();
->>>>>>> origin/master
 
 	}
 
