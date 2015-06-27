@@ -9,13 +9,13 @@ import java.util.Map;
 
 public class Player {
 
-	static final String VERSION = "We will win. Some. We will.";
+	static final String VERSION = "RAKIAAA!!!";
 
 	public static int betRequest(JsonElement request) {
 
 		int i;
 		int raise = 0;
-		int counter = 1;
+		int counter = 0;
 		JsonObject object = request.getAsJsonObject();
 		String buy_in = object.get("current_buy_in").toString();
 		JsonArray jarray = object.getAsJsonArray("players");
@@ -41,11 +41,13 @@ public class Player {
 				}
 			}
 			switch (counter) {
-			case 4:
+			case 4: 
 				return jarray.get(i).getAsJsonObject().get("stack").getAsInt();
 			case 3:
-				return Integer.parseInt(buy_in) + 200;
+				return jarray.get(i).getAsJsonObject().get("stack").getAsInt();
 			case 2:
+				return Integer.parseInt(buy_in) + 200;
+			case 1:
 				return Integer.parseInt(buy_in)
 						- jarray.get(1).getAsJsonObject().get("bet").getAsInt();
 			default:
