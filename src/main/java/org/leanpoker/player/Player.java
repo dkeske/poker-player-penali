@@ -37,7 +37,7 @@ public class Player {
 						counter++;
 						System.out.println("WIN :)");
 					}
-
+					
 				}
 			}
 			switch (counter) {
@@ -50,8 +50,10 @@ public class Player {
 			case 1:
 				return Integer.parseInt(buy_in)
 						- jarray.get(1).getAsJsonObject().get("bet").getAsInt();
-			default:
-				return 0;
+			case 0: return 0;
+			default: {
+				System.out.println("POKER");
+				return jarray.get(i).getAsJsonObject().get("stack").getAsInt();}
 
 			}
 		} else {
