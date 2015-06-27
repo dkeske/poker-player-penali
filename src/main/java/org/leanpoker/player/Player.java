@@ -18,7 +18,7 @@ public class Player {
     	int raise=0;
     	JsonObject object = request.getAsJsonObject();
     	String buy_in = object.get("current_buy_in").toString();
-    	
+    	System.out.println("Help me world");
     	JsonArray jarray = object.getAsJsonArray("players");
     	for (int i = 0; i < jarray.size(); i++) {
 			if(jarray.get(i).getAsJsonObject().get("name").toString().toLowerCase().equals("penali")){
