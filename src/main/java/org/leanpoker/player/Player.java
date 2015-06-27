@@ -49,7 +49,7 @@ public class Player {
 				return Integer.parseInt(buy_in) + 200;
 			case 1:
 				return Integer.parseInt(buy_in)
-						- jarray.get(1).getAsJsonObject().get("bet").getAsInt();
+						- jarray.get(1).getAsJsonObject().get("bet").getAsInt()+100;
 			case 0: return 0;
 			default: {
 				System.out.println("POKER");
