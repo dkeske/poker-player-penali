@@ -66,13 +66,13 @@ public class Player {
 							.toString())) {
 				System.out.println("PAR U RUCI");
 				return Integer.parseInt(buy_in) + 200;
-			} else if (karte.get(0).getAsJsonObject().get("rank").toString()
+			} else if (karte.get(0).getAsJsonObject().get("suit").toString()
 					.matches("^[JKDA]|[1][0]$")
-					|| karte.get(1).getAsJsonObject().get("rank").toString()
+					|| karte.get(1).getAsJsonObject().get("suit").toString()
 							.matches("^[JKDA]|[1][0]$")) {
 				System.out.println("REGEEEEEEX!!!");
 				return Integer.parseInt(buy_in) + 100;
-
+				
 			} else {
 				return Integer.parseInt(buy_in)
 						- jarray.get(1).getAsJsonObject().get("bet").getAsInt();
