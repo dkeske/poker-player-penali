@@ -66,9 +66,9 @@ public class Player {
 							.toString())) {
 				System.out.println("PAR U RUCI");
 				return Integer.parseInt(buy_in) + 200;
-			} else if (karte.get(0).getAsJsonObject().get("suit").toString()
+			} else if (karte.get(0).getAsJsonObject().get("rank").toString()
 					.matches("^[JKDA]|[1][0]$")
-					|| karte.get(1).getAsJsonObject().get("suit").toString()
+					|| karte.get(1).getAsJsonObject().get("rank").toString()
 							.matches("^[JKDA]|[1][0]$")) {
 				System.out.println("REGEEEEEEX!!!");
 				return Integer.parseInt(buy_in) + 100;
