@@ -21,7 +21,7 @@ public class Player {
     	JsonArray jarray = object.getAsJsonArray("players");
     	for (int i = 0; i < jarray.size(); i++) {
 			if(jarray.get(i).getAsJsonObject().get("name").toString().toLowerCase().equals("penali")){
-				System.out.println("Cekamo ovo: " + jarray.get(i).getAsJsonObject().get("hole_cards").getAsJsonArray().toString());
+				System.out.println("Help me world");
 				JsonArray karte = jarray.get(i).getAsJsonObject().get("hole_cards").getAsJsonArray();
 				if (karte.get(0).getAsJsonObject().get("rank").toString().equals(karte.get(1).getAsJsonObject().get("rank").toString()) || 
 					karte.get(0).getAsJsonObject().get("suit").toString().equals(karte.get(1).getAsJsonObject().get("suit").toString())){
