@@ -64,6 +64,7 @@ public class Player {
 							.toString()
 							.equals(karte.get(1).getAsJsonObject().get("suit")
 									.toString())){
+				System.out.println("PAR U RUCI");
 				return Integer.parseInt(buy_in)+ 200;
 			}
 		}
