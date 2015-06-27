@@ -17,11 +17,12 @@ public class Player {
 
     	int raise=0;
     	JsonObject object = request.getAsJsonObject();
+    	System.out.println(request);
     	String buy_in = object.get("current_buy_in").toString();
     	JsonArray jarray = object.getAsJsonArray("players");
     	System.out.println();
     	System.out.println("POCETAK");
-    	System.out.println(jarray.get(0).getAsJsonObject().get("hole_cards").getAsJsonArray().get(0).getAsJsonObject().get("rank").toString());
+    	//System.out.println(jarray.get(1).getAsJsonObject().get("hole_cards").getAsJsonArray().get(0).getAsJsonObject().get("rank").toString());
     	for (int i = 0; i < jarray.size(); i++) {
 			if(jarray.get(i).getAsJsonObject().get("name").toString().toLowerCase().equals("penali")){
 				System.out.println("Help me world");
