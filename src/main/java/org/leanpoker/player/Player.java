@@ -22,7 +22,7 @@ public class Player {
     	JsonArray jarray = object.getAsJsonArray("players");
     	System.out.println();
     	System.out.println("POCETAK");
-    	//System.out.println(jarray.get(1).getAsJsonObject().get("hole_cards").getAsJsonArray().get(0).getAsJsonObject().get("rank").toString());
+    	System.out.println(jarray.toString());
     	for (int i = 0; i < jarray.size(); i++) {
 			if(jarray.get(i).getAsJsonObject().get("name").toString().toLowerCase().equals("penali")){
 				System.out.println("Help me world");
@@ -34,7 +34,9 @@ public class Player {
 					} else {
 						return Integer.parseInt(buy_in)+100;
 					}
+				
 			}
+			break;
 		}
     	return 0;
         
