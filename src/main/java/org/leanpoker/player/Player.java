@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Player {
 
-    static final String VERSION = "Default Java folding player";
+    static final String VERSION = "We will win. Some. We will.";
 
     public static int betRequest(JsonElement request) {
         return 200;
